@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <head>
-        <img class="PokemonLogo" src="./assets/International_Pokémon_logo.svg" alt="Pokemon Logo">
-            <br>
-    </head>
-
-    <main>
-        <button id="previous" onclick="loadPreviousPage()">Previous</button>
-        <button id="next" onclick="loadNextPage()">Next</button>
-    </main>
-
-    <footer>
-
-    </footer>
+    <!-- <button onclick="loadPreviousPage()">Previous Page</button> -->
+    <div id="pokedex-container"></div>
+    <button onclick="loadNextPage()">Next Page</button>
 </body>
-<script src="./service/poke-service.js"></script>
 <script src="./model/pokemon.js"></script>
+<script src="./model/pokedex.js"></script>
+<script src="./services/poke-service.js"></script>
 <script src="./app.js"></script>
 </html>
