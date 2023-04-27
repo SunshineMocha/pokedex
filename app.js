@@ -1,5 +1,7 @@
 // console.log('hello pokemon!!!')
 
+window.addEventListener("scroll", loadNextPage);
+
 let pokemonCollection = new PokeDex();
 
 let actualPage;
@@ -51,8 +53,13 @@ function displayPokeDex(){
         const pokemon = pokemonCollection.pokemonArray[i];
         container.innerHTML += `
                 <div>
-                    <span>${pokemon.name}</span>
+                    <span>
+                        <h1>
+                        <a href="./detail.html?pokemon=${pokemon.name}">${pokemon.name}</a>
+                        </h1>
+                    </span>
                 </div>
         ` 
+        // document.getElementById('pokedex-container').innerHTML = html;
     }
 }
