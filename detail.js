@@ -11,10 +11,10 @@ const pokemonName = urlSearchParams.get('pokemon');
 PokeService.getDetail(pokemonName).then(pokemon => {
     console.log(pokemon);
     displayName(pokemon);
-    displayPicture(pokemon);
     displayHeight(pokemon);
     displayWeight(pokemon);
     displayDexNumber(pokemon);
+    displaySprite(pokemon)
 })
 
 function displayName(pokemon){
@@ -23,10 +23,6 @@ function displayName(pokemon){
     container.innerHTML =``;
     const pokeName = document.createTextNode(`${pokemon.name}`);
     container.appendChild(pokeName);
-}
-
-function displayPicture(pokemon){
-    
 }
 
 function displayHeight(pokemon){
@@ -62,6 +58,19 @@ function displayDexNumber(pokemon){
                     <span>
                         <h1>
                           No. ${pokemon.id}
+                        </h1>
+                    </span>
+                </div>
+        ` 
+}
+
+function displaySprite(pokemon){
+    const container = document.getElementById('pokemon-Page');
+    container.innerHTML += `
+                <div>
+                    <span>
+                        <h1>
+                        <img src="${pokemon.sprites.front_default}" alt="">
                         </h1>
                     </span>
                 </div>
