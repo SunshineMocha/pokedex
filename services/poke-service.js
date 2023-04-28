@@ -22,4 +22,8 @@ class PokeService{
         const url = this.POKE_URL + '/' + name;
         return fetch(url).then(resp => resp.json());
     }
+
+    static getType(url){
+        return fetch(url).then(resp => resp.json());
+    }
 }

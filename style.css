@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0%;
+    
     font-family: 'GB' !important;
     /* src: url("./assets/PKMN\ RBYGSC.ttf");*/
 }
@@ -18,6 +19,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 #pokemon-Page{
@@ -25,8 +27,8 @@
     background-color: black;
     color: white;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around
+    flex-direction: row;
+    /* justify-content: space-evenly; */
 }
 
 header{
@@ -41,7 +43,9 @@ header{
 }
 
 body{
+    height: 100%;
     background-color: rgba(204,0,0,0.7);
+    border: 10px solid black;
 }   
 
 .buttons{
@@ -57,7 +61,13 @@ body{
     flex-direction: row;
 }
 
+ul{
+    list-style-type: none;
+}
+
 #pokedex-container{
+    margin: 5px;
+    border: 5px solid white;
     background-color:black;
     color: white;
     display: flex;
